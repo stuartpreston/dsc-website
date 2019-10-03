@@ -1,0 +1,7 @@
+name 'mywebsite'
+maintainer 'Stuart Preston'
+maintainer_email 'stuart@chef.io'
+license 'apache2'
+description 'Installs/Configures mywebsite'
+long_description 'Installs/Configures mywebsite'
+version '0.1.0'
