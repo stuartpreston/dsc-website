@@ -1,7 +1,6 @@
 name 'mywebsite'
 maintainer 'Stuart Preston'
 maintainer_email 'stuart@chef.io'
-license 'apache2'
+license 'Apache-2.0'
 description 'Installs/Configures mywebsite'
-long_description 'Installs/Configures mywebsite'
 version '0.1.0'

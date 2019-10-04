@@ -23,9 +23,11 @@ module DscContrib
     def cim_instance(name, *properties)
       DscContrib::CimConverter.new(name, properties, false)
     end
+
     def cim_instance_array(name, *properties)
       DscContrib::CimConverter.new(name, properties, true)
     end
+
     def cim_instance_array_helper(instances)
       DscContrib::CimInstanceArray.new(instances)
     end
@@ -36,7 +38,7 @@ module DscContrib
 
     def initialize(name, properties, is_array)
       @name = name
-      @properties = (properties.flatten)[0]
+      @properties = properties.flatten[0]
       @is_array = is_array
     end
 

@@ -1,0 +1,23 @@
+---
+driver:
+  name: azurerm
+  subscription_id: <%= ENV['AZURE_SUBSCRIPTION_ID'] %>
+  location: 'West Europe'
+  machine_size: 'Standard_DS2_v2'
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: windows2019
+    driver:
+      image_urn: MicrosoftWindowsServer:WindowsServer:2019-Datacenter-smalldisk:latest
+      use_ephemeral_osdisk: true
+    transport:
+      name: winrm
+
+suites:
+  - name: default
+    run_list:
+      - recipe[mywebsite::default]
+    attributes:
